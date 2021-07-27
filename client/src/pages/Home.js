@@ -1,14 +1,31 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {Carousel,Button} from 'react-bootstrap'
 import '../App.css';
 import Slider from '../components/Slider';
 import AboutUs from '../components/AboutUs'
 import NavBarHome from './NavBarHome';
 import Footer from '../components/Footer';
+import { useSelector } from 'react-redux';
 
-const Home = () => {
- 
+const Home = ({history}) => {
+  const user = useSelector(state => state.authReducer.user)
+  const isAuth = useSelector(state => state.authReducer.isAuth)
+ useEffect(() => {
+   if(isAuth && user){
+    if( user.role=="admin")
+    history.push('/Users')
+   }
+
+   
+   else
+   if(isAuth && user.role=="instructor")
+    history.push('/')
+
+   else
+   history.push('/')
+
+ }, [isAuth, history]) 
   return (
     <div>
      <NavBarHome></NavBarHome>

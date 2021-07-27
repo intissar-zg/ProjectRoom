@@ -12,6 +12,8 @@ import AdminRoute from './components/PrivateRoute/AdminRoute';
 import Room from './components/Room/Room';
 import Main from './components/Main/Main';
 import Users from './pages/Users';
+import Courses from './pages/Courses'
+import Courses_Student from './pages/Courses_Student'
 
 function App() {
   return (
@@ -25,7 +27,8 @@ function App() {
       <Route exact path="/Room/:roomId" component={Room} />
       <Route exact path="/Main" component={Main} />
       <AdminRoute exact path="/Allusers" component={Users}/>
-      <Route exact path='/Posts' component={Posts}/>
+      <Route exact path='/Courses' component={Courses}/>
+      <Route exact path='/Courses_Student' component={Courses_Student}/>
       <Route exact path='/Profile' component={Profile}/>
       
       

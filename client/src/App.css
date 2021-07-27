@@ -39,10 +39,33 @@ h1{
   text-decoration: none; 
   color:#f3f33dcb;
  border-color: grey;
+ 
+ 
+
+    
+}
+.link1 {
+  text-decoration: none; 
+  color:black;
+ border-color: grey;
 
     
 }
 
 .bar{
+  display: flex;
+  justify-content: space-between;
  background-color: #282828;
+ width: 100%;
+}
+
+.logo{
+  height: 80px;
+  width: 200px;
+  margin-top: 0;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
 }

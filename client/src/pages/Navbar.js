@@ -58,11 +58,11 @@ const user = useSelector(state => state.authReducer.user)
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            <Button color="inherit"><Link to='/Home'className="link">Home</Link></Button>
+            <Button color="inherit"><Link to='/'className="link">Home</Link></Button>
          
             
             {/* <Button color="inherit"><Link to='/Profile'>Profile</Link></Button> */}
-            <Button color="inherit"><Link to='/Posts' className="link" >Consult Courses</Link></Button>
+            <Button color="inherit"><Link to='/Courses_Student' className="link" >Consult Courses</Link></Button>
             <Button color="inherit"><Link to='/main' className="link" >Paticipate Courses</Link></Button>
           </Typography>
           {auth && (

@@ -51,16 +51,13 @@ const user = useSelector(state => state.authReducer.user)
     <div className={classes.root}>
        <AppBar position="static" >
         <Toolbar className="bar">
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
           <Typography variant="h6" className={classes.title}>
             <Button 
-            ><Link to='/Home'className="link">Home</Link></Button>
+            ><Link to='/'className="link">Home</Link></Button>
          
             
             {/* <Button color="inherit"><Link to='/Profile'>Profile</Link></Button> */}
-            <Button color="inherit"><Link to='/Posts' className="link" >Courses</Link></Button>
+            <Button color="inherit"><Link to='/Courses' className="link" >Courses</Link></Button>
             <Button color="inherit"><Link to='/main' className="link" >Create Class</Link></Button>
           </Typography>
           {auth && (

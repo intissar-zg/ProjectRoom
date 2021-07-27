@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux'
 import CoursesCardStudent from '../components/Courses/CoursesCardStudent'
 import {useDispatch} from 'react-redux'
 import {get_Course} from '../actions/courseAction'
+import NavBar from './Navbar'
 
 
 const Courses = () => {
@@ -17,6 +18,7 @@ const Courses = () => {
     return (
 
         <div> 
+            <NavBar></NavBar>
             <h1 style={{  alignText:'center'}}>All Courses</h1>
            <p style={{ display:'flex', alignContent:'center' ,flexWrap: 'wrap'}}>
          {courses && courses.map((course) => <CoursesCardStudent key = {course._id} course = {course} />)} </p>

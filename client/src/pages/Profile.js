@@ -4,6 +4,9 @@ import NavBar from './Navbar'
 import NavBarInstructor from './NavBarIstructor'
 import Users from './Users'
 import Login from './Login'
+import { Slider } from '@material-ui/core'
+import AboutUs from '../components/AboutUs'
+import Footer from '../components/Footer'
 
 
 const Profile = ({history}) => {
@@ -27,6 +30,9 @@ const Profile = ({history}) => {
         <div>
             {role=="instructor"?<NavBarInstructor></NavBarInstructor>:
            <NavBar></NavBar>}
+            <Slider></Slider>
+    <AboutUs></AboutUs>
+    <Footer></Footer>
         </div>
     )
 }

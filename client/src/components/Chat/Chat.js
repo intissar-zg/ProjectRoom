@@ -72,10 +72,11 @@ const ChatContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 25%;
-  hieght: 100%;
+  hight: 100%;
   background-color: white;
   transition: all 0.5s ease;
   overflow: hidden;
+  border:3px solid #282828;
 `;
 
 const TopHeader = styled.div`
@@ -83,7 +84,8 @@ const TopHeader = styled.div`
   margin-top: 15px;
   font-weight: 600;
   font-size: 20px;
-  color: black;
+  color: goldenrod;
+  text-align: center;
 `;
 
 const ChatArea = styled.div`
@@ -111,6 +113,9 @@ const Message = styled.div`
   margin-top: 15px;
   margin-left: 15px;
   text-align: left;
+  color:black;
+
+
 
   > strong {
     margin-left: 3px;
@@ -136,7 +141,6 @@ const UserMessage = styled.div`
   font-size: 16px;
   margin-top: 15px;
   text-align: right;
-
   > strong {
     margin-right: 35px;
   }
@@ -161,7 +165,7 @@ const BottomInput = styled.input`
   width: 100%;
   height: 8%;
   padding: 15px;
-  border-top: 1px solid rgb(69, 69, 82, 0.25);
+  border-top: 3px solid rgb(69, 69, 82, 0.25);
   box-sizing: border-box;
   opacity: 0.7;
 

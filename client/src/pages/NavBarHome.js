@@ -6,25 +6,18 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import {useHistory} from 'react-router-dom'
-import {logout} from '../actions/authAction'
-import {useSelector,useDispatch} from 'react-redux'
+
 const NavBarHome = () => {
     return (
-        <div>
-         
-         <AppBar position="static">
+        <div className="flex">
         <Toolbar  className="bar">
-          <Typography variant="h6" >
-          {/* /* logo */  }
-          </Typography>
+        <img className="logo" src ="logo.png" alt="image"/>
+        <div>
           <Button color="inherit"><Link to='/login'className="link">LOGIN</Link></Button>
             <Button color="inherit"><Link to='/Register/student' className="link" >REGISTER</Link></Button>
             <Button color="inherit"><Link to='/Register/instructor' className="link" >INSTRUCTOR</Link></Button>
-        </Toolbar>
-      </AppBar>
+            </div></Toolbar>
+   
  {/*  <br />
   <Navbar bg="goldenrod" variant="goldenrod">
     <Container>

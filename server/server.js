@@ -13,6 +13,7 @@ connect();
 app.use('/users',require('./routes/user'))
 app.use('/posts',require('./routes/post'))
 app.use('/admins',require('./routes/admin'))
+app.use('/courses',require('./routes/course'))
 
 
 let socketList = {};

@@ -30,7 +30,7 @@ const BottomBar = ({
               <FaIcon className='fas fa-video-slash'></FaIcon>
             )}
           </div>
-          Camera
+         {/*  Camera */}
         </CameraButton>
         {showVideoDevices && (
           <SwitchList>
@@ -53,7 +53,7 @@ const BottomBar = ({
               <FaIcon className='fas fa-microphone-slash'></FaIcon>
             )}
           </div>
-          Audio
+          {/* Audio */}
         </CameraButton>
       </Left>
       <Center>
@@ -61,7 +61,7 @@ const BottomBar = ({
           <div>
             <FaIcon className='fas fa-comments'></FaIcon>
           </div>
-          Chat
+          {/* Chat */}
         </ChatButton>
         <ScreenButton onClick={clickScreenSharing}>
           <div>
@@ -69,7 +69,7 @@ const BottomBar = ({
               className={`fas fa-desktop ${screenShare ? 'sharing' : ''}`}
             ></FaIcon>
           </div>
-          Share Screen
+          {/* Share Screen */}
         </ScreenButton>
       </Center>
       <Right>
@@ -90,12 +90,11 @@ const Bar = styled.div`
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  background-color: #FFD700;
+  background-color: goldenrod;
 `;
 const Left = styled.div`
   display: flex;
   align-items: center;
-
   margin-left: 15px;
 `;
 
@@ -153,13 +152,14 @@ const StopButton = styled.div`
   font-size: 0.9375rem;
   line-height: 30px;
   margin-right: 15px;
+  text-align:center;
   color: white;
-  background-color:#FF6347 ;
+  background-color:#282828;
   ;
   border-radius: 15px;
 
   :hover {
-    background-color: #f2548;
+    background-color: #282828;
     cursor: pointer;
   }
 `;
