@@ -38,6 +38,7 @@ exports.register = async (req, res) => {
 
 exports.login = async (req, res) => {
   try {
+    console.log(req.body)
     const { email, password } = req.body;
     const existUser = await User.findOne({ email: email });
     if (!existUser)

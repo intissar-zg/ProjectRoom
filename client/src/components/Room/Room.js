@@ -5,10 +5,11 @@ import socket from '../../socket';
 import VideoCard from '../Video/VideoCard';
 import BottomBar from '../BottomBar/BottomBar';
 import Chat from '../Chat/Chat';
+import { useHistory } from 'react-router-dom';
 
 
 const Room = (props) => {
-
+const history=useHistory()
   const currentUser = sessionStorage.getItem('user');
   const [peers, setPeers] = useState([]);
   const [userVideoAudio, setUserVideoAudio] = useState({
@@ -30,6 +31,7 @@ const Room = (props) => {
       const filtered = devices.filter((device) => device.kind === 'videoinput');
       setVideoDevices(filtered);
     });
+ 
 
     // Set Back Button Event
     window.addEventListener('popstate', goToBack);
@@ -135,6 +137,12 @@ const Room = (props) => {
     };
     // eslint-disable-next-line
   }, []);
+  useEffect(() => {
+    return () => {
+      console.log('socket close')
+      socket.close()
+    }
+  }, [])
 
   function createPeer(userId, caller, stream) {
     const peer = new Peer({
@@ -214,6 +222,9 @@ const Room = (props) => {
     e.preventDefault();
     socket.emit('BE-leave-room', { roomId, leaver: currentUser });
     sessionStorage.removeItem('user');
+    //socket.emit('disconnect')
+    socket.disconnect()
+    history.push('/')
     //localStorage.clear();
     window.location.href = '/';
   };

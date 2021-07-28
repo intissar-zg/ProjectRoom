@@ -41,10 +41,15 @@ app.get('/ping', (req, res) => {
 io.on('connection', (socket) => {
   console.log(`New User connected: ${socket.id}`);
 
-  socket.on('disconnect', () => {
+/*   socket.on('disconnect', () => {
     socket.disconnect();
+    socket.close();
     console.log('User disconnected!');
-  });
+  }); */
+  io.sockets.on('disconnect', function() {
+    // handle disconnect
+    io.sockets.disconnect();
+    io.sockets.close();});
 
   socket.on('BE-check-user', ({ roomId, userName }) => {
     let error = false;
