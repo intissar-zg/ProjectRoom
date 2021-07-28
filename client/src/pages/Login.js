@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { useState } from 'react';
+import socket from '../socket';
 
 //react-router-dom
 import {useHistory} from 'react-router-dom'
@@ -55,6 +56,11 @@ const useStyles = makeStyles((theme) => ({
 
   
 const Login = () => {
+  useEffect(() => {
+    socket.disconnect()
+    socket.close()
+   
+  }, [])
   /* const history = useHistory()
   const role = useSelector(state => state.authReducer.user.role)
   const isAuth = useSelector(state => state.authReducer.isAuth)
